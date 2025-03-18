@@ -33,7 +33,12 @@ Before you begin, ensure you have met the following requirements:
     ```
     Update the `.env.local` file with your database credentials.
 
-5. Run the database migrations:
+5. Create the database:
+    ```bash
+    php bin/console doctrine:database:create
+    ```
+
+6. Run the database migrations:
     ```bash
     php bin/console doctrine:migrations:migrate
     ```
