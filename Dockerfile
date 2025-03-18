@@ -6,6 +6,6 @@ RUN mkdir project
 COPY . project
 COPY vhosts.conf /etc/apache2/sites-enabled
 RUN /etc/init.d/apache2 restart
-RUN chmod -R 777 project/var/cache
+RUN chmod -R 777 project/var/cache /var/www/project/var/log
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
