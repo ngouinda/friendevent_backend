@@ -87,7 +87,7 @@ php bin/phpunit
 # Run the project with Docker
 
 Modifier la connection string dans le fichier .env
-DATABASE_URL="mysql://root:root@friendeventbackend-database-1/friendevent?serverVersion=8.0.32&charset=utf8mb4"
+DATABASE_URL="mysql://root:root@friendevent_backend-database-1/friendevent?serverVersion=8.0.32&charset=utf8mb4"
 
 ```
 docker-compose up
