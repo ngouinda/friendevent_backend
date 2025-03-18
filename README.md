@@ -99,8 +99,8 @@ php bin/console doctrine:migrations:migrate
 # Remove the container, image and volumes
 ```
 sudo docker-compose down
-sudo docker image rm friendeventbackend-backend
-sudo docker volume rm friendeventbackend_mysql_data
+sudo docker image rm friendevent_backend-backend
+sudo docker volume rm friendevent_backend_mysql_data
 ```
 
 ## Contributing
