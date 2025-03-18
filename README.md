@@ -91,7 +91,7 @@ DATABASE_URL="mysql://root:root@friendeventbackend-database-1/friendevent?server
 
 ```
 docker-compose up
-sudo docker exec -it friendeventbackend-backend-1 bash
+sudo docker exec -it friendevent_backend-backend-1 bash
 cd project
 php bin/console doctrine:migrations:migrate
 ```
