@@ -105,7 +105,7 @@ sudo docker volume rm friendevent_backend_mysql_data
 
 ## Contributing
 
-To contribute to this project, please fork the repository and create a pull request.
+To contribute to this project, please fork the repository and create a pull request. 
 
 ## License
 
