@@ -69,11 +69,16 @@
                 <td>{{ event.date ? event.date|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ event.user.pseudo }}</td>
                 <td class="actions">
-                    <a href="{{ path('app_event_show', {'id': event.id}) }}">show</a>
-                    <a href="{{ path('app_event_edit', {'id': event.id}) }}">edit</a>
+                    <a href="{{ path('app_event_show', {'id': event.id}) }}"><img src="{{ asset('icons/show.svg') }}" width=20 height=20 /></a>
+                    <a href="{{ path('app_event_edit', {'id': event.id}) }}"><img src="{{ asset('icons/edit.svg') }}" width=20 height=20 /></a>
+                    <form action="{{ path('app_event_delete', {'id': event.id}) }}" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ event.id) }}">
+                        <button type="submit"><img src="{{ asset('icons/delete.svg') }}" width=20 height=20 /></button>
+                    </form>
                 </td>
                 <td class="participation">
-                    <a href="{{ path('app_event_register', {'id': event.id}) }}">participate</a>
+                    <a href="{{ path('app_event_register', {'id': event.id}) }}"><img src="{{ asset('icons/handUp.svg') }}" width=40 height=40 /></a>
                 </td>
             </tr>
         {% else %}
