@@ -1,5 +1,6 @@
 services:
     database:
+        container_name: 'friendevent_backend_database'
         image: 'mysql:9'
         environment:
             MYSQL_ROOT_PASSWORD: root
@@ -7,12 +8,13 @@ services:
         ports:
             - '3306'
         volumes:
-            - 'mysql_data:/var/lib/mysql'
+            - 'friendevent_backend_mysql_data:/var/lib/mysql'
     backend:
+        container_name: 'friendevent_backend'
         build: .
         ports:
             - '8082:80'
 
 volumes:
-    mysql_data:
+    friendevent_backend_mysql_data:
 
