@@ -11,7 +11,7 @@ services:
             - 'friendevent_backend_mysql_data:/var/lib/mysql'
     backend:
         container_name: 'friendevent_backend'
-        image: 'fredericbui/friendevent_backend'
+        build: .
         ports:
             - '8082:80'
 
